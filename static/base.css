@@ -1,0 +1,20 @@
+:root {
+  --sans-serif-font: "Inter", monospace;
+  --sans-serif-font-weight-bold: 700;
+  --monospace-font: "Overpass Mono", monospace;
+  --monospace-font-weight-bold: 700;
+}
+
+abbr[title] {
+  text-decoration: none;
+}
+
+body {
+  font-family: var(--sans-serif-font);
+  font-size: 16px;
+}
+
+.lucide {
+  width: 22px;
+  height: 22px;
+}

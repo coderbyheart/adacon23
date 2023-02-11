@@ -1,0 +1,77 @@
+{
+  "name": "@coderbyheart/adacon23",
+  "version": "0.0.0-development",
+  "description": "Ada Con 2023 in Oslo",
+  "scripts": {
+    "prepare": "husky install",
+    "start": "vite",
+    "build": "node --max_old_space_size=8192 ./node_modules/vite/bin/vite.js build --emptyOutDir"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coderbyheart/adacon23.git"
+  },
+  "keywords": [
+    "adacon23",
+    "techwomen",
+    "norway"
+  ],
+  "author": "Tech Women Norway",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/coderbyheart/adacon23/issues"
+  },
+  "homepage": "https://github.com/coderbyheart/adacon23#readme",
+  "devDependencies": {
+    "@preact/preset-vite": "2.5.0",
+    "@types/node": "18.13.0",
+    "husky": "8.0.3",
+    "lint-staged": "13.1.1",
+    "preact-render-to-string": "5.2.6",
+    "prettier": "2.8.4",
+    "rehype-format": "4.0.1",
+    "rehype-stringify": "9.0.3",
+    "remark": "14.0.2",
+    "remark-extract-frontmatter": "3.2.0",
+    "remark-frontmatter": "4.0.1",
+    "remark-rehype": "10.1.0",
+    "typescript": "4.9.5",
+    "vite": "4.1.1",
+    "vite-plugin-ssr": "0.4.78",
+    "yaml": "2.2.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "prettier --write",
+      "eslint --ext .js,.ts,.jsx,.tsx"
+    ],
+    "*.{md,json,yaml,yml,html}": [
+      "prettier --write"
+    ]
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
+  "release": {
+    "branches": [
+      "saga"
+    ],
+    "remoteTags": true,
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/github"
+    ]
+  },
+  "dependencies": {
+    "bootstrap": "5.2.3",
+    "date-fns": "2.29.3",
+    "styled-components": "6.0.0-beta.11"
+  }
+}

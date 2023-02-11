@@ -1,0 +1,95 @@
+name: Build and Release
+
+on:
+  push:
+    branches:
+      - saga
+
+permissions:
+  id-token: write
+  contents: write
+  issues: write
+
+env:
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "18.x"
+
+      - name: Keep npm cache around to speed up installs
+        uses: actions/cache@v3
+        with:
+          path: ~/.npm
+          key: ${{ runner.OS }}-build-${{ hashFiles('**/package-lock.json') }}
+
+      - name: Install dependencies
+        run: npm ci --no-audit
+
+      - name: Get current release
+        run: echo "currentRelease=$(git describe --tags --abbrev=0)" >> $GITHUB_ENV
+
+      - name: Determine next release version
+        uses: nordicsemiconductor/cloud-get-next-version-action@saga
+        id: version
+        with:
+          branch: saga
+          defaultVersion: "${{ env.currentRelease }}-${{ github.sha }}"
+
+      - name: Build
+        env:
+          VERSION: ${{ steps.version.outputs.nextRelease }}
+        run: |
+          npm run build
+          cp -L -r ./static ./build/client
+
+      - name: Semantic release
+        continue-on-error: true
+        run: npx semantic-release
+
+    - name: Archive artifact
+      shell: sh
+      run: |
+        chmod -c -R +rX build/client | while read line; do
+          echo "::warning title=Invalid file permissions automatically fixed::$line"
+        done
+        tar \
+          --dereference --hard-dereference \
+          --directory build/client \
+          -cvf "$RUNNER_TEMP/artifact.tar" \
+          --exclude=.git \
+          --exclude=.github \
+          .
+
+    - name: Upload artifact
+      uses: actions/upload-artifact@main
+      with:
+        name: github-pages
+        path: ${{ runner.temp }}/artifact.tar
+        retention-days: 1
+
+  deploy:
+    needs: build
+
+    permissions:
+      pages: write
+      id-token: write
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1
