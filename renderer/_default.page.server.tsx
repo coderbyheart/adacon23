@@ -18,6 +18,7 @@ export const render = async (pageContext: PageContextCustom) => {
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
         <meta name="application-name" content="Ada Con 2023" />
+        <meta name="base" content="${import.meta.env.BASE_URL}" />
         <title>
           Ada Con 2023 in Oslo
         </title>
@@ -28,16 +29,16 @@ export const render = async (pageContext: PageContextCustom) => {
         <link
           rel="stylesheet"
           type="text/css"
-          href="/static/bootstrap.min.css"
+          href="./static/bootstrap.min.css"
         />
-        <link rel="stylesheet" type="text/css" href="/static/base.css" />
+        <link rel="stylesheet" type="text/css" href="./static/base.css" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
           href="https://fonts.googleapis.com/css2?family=Inter&Overpass+Mono:wght@400;700&display=swap"
           rel="stylesheet"
         />
-        <link rel="shortcut icon" href="/static/favicon.ico" />
+        <link rel="shortcut icon" href="./static/favicon.ico" />
         <meta name="version" content="${version}" />
       </head>
       <body>
