@@ -23,6 +23,8 @@
   },
   "homepage": "https://github.com/coderbyheart/adacon23#readme",
   "devDependencies": {
+    "@nordicsemiconductor/asset-tracker-cloud-code-style": "11.0.177",
+    "@nordicsemiconductor/eslint-config-asset-tracker-cloud-typescript": "11.0.2",
     "@preact/preset-vite": "2.5.0",
     "@types/node": "18.13.0",
     "husky": "8.0.3",
@@ -73,5 +75,6 @@
     "bootstrap": "5.2.3",
     "date-fns": "2.29.3",
     "styled-components": "6.0.0-beta.11"
-  }
+  },
+  "prettier": "@nordicsemiconductor/asset-tracker-cloud-code-style/.prettierrc"
 }
