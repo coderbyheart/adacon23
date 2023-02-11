@@ -1,15 +1,15 @@
-import renderPreact from "preact-render-to-string";
-import { ServerStyleSheet } from "styled-components";
-import { dangerouslySkipEscape, escapeInject } from "vite-plugin-ssr";
-import { version } from "../siteInfo";
-import type { PageContextCustom } from "./_default.page.client";
+import renderPreact from 'preact-render-to-string'
+import { ServerStyleSheet } from 'styled-components'
+import { dangerouslySkipEscape, escapeInject } from 'vite-plugin-ssr'
+import { version } from '../siteInfo'
+import type { PageContextCustom } from './_default.page.client'
 
 export const render = async (pageContext: PageContextCustom) => {
-  const { Page, pageProps } = pageContext;
-  const sheet = new ServerStyleSheet();
-  const viewHtml = renderPreact(sheet.collectStyles(<Page {...pageProps} />));
+	const { Page, pageProps } = pageContext
+	const sheet = new ServerStyleSheet()
+	const viewHtml = renderPreact(sheet.collectStyles(<Page {...pageProps} />))
 
-  return escapeInject`<!DOCTYPE html>
+	return escapeInject`<!DOCTYPE html>
     <html lang="en">
       <head>
         <meta charset="utf-8" />
@@ -45,7 +45,7 @@ export const render = async (pageContext: PageContextCustom) => {
         <noscript>You need to enable JavaScript to run this app.</noscript>
       </body>
     </html>
-    `;
-};
+    `
+}
 
-export const passToClient = ["pageProps"];
+export const passToClient = ['pageProps']

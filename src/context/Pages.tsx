@@ -1,36 +1,36 @@
-import { ComponentChildren, createContext } from "preact";
-import { useContext } from "preact/hooks";
+import { ComponentChildren, createContext } from 'preact'
+import { useContext } from 'preact/hooks'
 
 export type Page = {
-  title: string;
-  slug: string;
-  html: string;
-};
+	title: string
+	slug: string
+	html: string
+}
 
 export const PagesContext = createContext<{
-  pages: Page[];
+	pages: Page[]
 }>({
-  pages: [],
-});
+	pages: [],
+})
 
 export const Provider = ({
-  children,
-  pages,
+	children,
+	pages,
 }: {
-  children: ComponentChildren;
-  pages: Page[];
+	children: ComponentChildren
+	pages: Page[]
 }) => {
-  return (
-    <PagesContext.Provider
-      value={{
-        pages,
-      }}
-    >
-      {children}
-    </PagesContext.Provider>
-  );
-};
+	return (
+		<PagesContext.Provider
+			value={{
+				pages,
+			}}
+		>
+			{children}
+		</PagesContext.Provider>
+	)
+}
 
-export const Consumer = PagesContext.Consumer;
+export const Consumer = PagesContext.Consumer
 
-export const usePages = () => useContext(PagesContext);
+export const usePages = () => useContext(PagesContext)
