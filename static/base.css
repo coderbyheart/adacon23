@@ -1,8 +1,16 @@
 :root {
-  --sans-serif-font: "Inter", monospace;
-  --sans-serif-font-weight-bold: 700;
-  --monospace-font: "Overpass Mono", monospace;
-  --monospace-font-weight-bold: 700;
+  --sans-serif-font: "Roboto", sans-serif;
+  --sans-serif-font-weight: 400;
+  --sans-serif-font-weight-bold: 500;
+  --sans-serif-font-weight-boldest: 700;
+  --headline-font: "Montserrat", sans-serif;
+  --headline-font-weight: 600;
+  --headline-font-weight-semi-bold: 700;
+  --headline-font-weight-bold: 800;
+  --color-dark-bg: #141c25;
+  --color-dim-bg: #f0f6fa;
+  --color-highlight: #781e7c;
+  --color-text: #415b78;
 }
 
 abbr[title] {
@@ -11,10 +19,60 @@ abbr[title] {
 
 body {
   font-family: var(--sans-serif-font);
+  font-weight: var(--sans-serif-font-weight);
   font-size: 16px;
 }
 
-.lucide {
-  width: 22px;
-  height: 22px;
+.btn-primary {
+  --bs-btn-bg: var(--color-highlight);
+  --bs-btn-border-color: var(--color-highlight);
+  --bs-btn-hover-bg: #551558;
+  --bs-btn-hover-border-color: #551558;
+}
+
+.btn-secondary {
+  --bs-btn-bg: #37c9ff;
+  --bs-btn-border-color: #37c9ff;
+  --bs-btn-hover-bg: #2daddb;
+  --bs-btn-hover-border-color: #2daddb;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--headline-font);
+  font-weight: var(--headline-font-weight-bold);
+}
+
+.font-headline {
+  font-family: var(--headline-font);
+  font-weight: var(--headline-font-weight);
+}
+
+.fw-semibold {
+  font-weight: var(--sans-serif-font-weight-bold) !important;
+}
+
+.font-headline.fw-semibold {
+  font-weight: var(--headline-font-weight-semi-bold) !important;
+}
+
+.opacity-65 {
+  opacity: 0.65;
+}
+
+.bg-off-white {
+  background-color: var(--color-dim-bg);
+}
+
+a {
+  color: var(--color-highlight);
+}
+
+p {
+  color: var(--color-text);
+  font-size: 18px;
 }
