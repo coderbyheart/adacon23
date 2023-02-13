@@ -10,10 +10,11 @@ const FixedNav = styled.div`
 			color: white;
 		}
 	}
-	position: absolute;
+	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100%;
+	z-index: 1000;
 `
 
 export const HeaderNav = () => (
