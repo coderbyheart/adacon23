@@ -1,6 +1,6 @@
 import { styled } from 'styled-components'
 import { Con } from '../con'
-import { pluralize } from './pluralize'
+import { Pluralize } from './Pluralize'
 
 const StatsWrapper = styled.aside`
 	width: 100%;
@@ -24,7 +24,11 @@ export const ConfStats = () => (
 					</strong>
 					<br />
 					<span class="fs-md-4 opacity-65 fw-semibold">
-						{pluralize(Con.statistics.days, 'Day', 'Days')}
+						<Pluralize
+							value={Con.statistics.days}
+							singular={() => <>Day</>}
+							plural={() => <>Days</>}
+						/>
 					</span>
 				</div>
 				<div class="col-3">
@@ -40,11 +44,11 @@ export const ConfStats = () => (
 					</strong>
 					<br />
 					<span class="fs-md-4 opacity-65 fw-semibold">
-						{pluralize(
-							Con.statistics.workshops,
-							`Work${'\u200B'}shop`,
-							`Work${'\u200B'}shops`,
-						)}
+						<Pluralize
+							value={Con.statistics.workshops}
+							singular={() => <>Work&shy;shop</>}
+							plural={() => <>Work&shy;shops</>}
+						/>
 					</span>
 				</div>
 			</div>

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'preact/hooks'
 import { Con } from '../con'
-import { pluralize } from './pluralize'
+import { Pluralize } from './Pluralize'
 
 const diff = (target_date: Date) => {
 	// find the amount of "seconds" between now and target
@@ -43,31 +43,47 @@ export const Countdown = () => {
 	return (
 		<aside>
 			<div class="row mt-4 mb-4">
-				<h2 class="fs-4 text-center">
+				<h2 class="fs-md-4 text-center">
 					Ada Con {Con.date.toLocaleDateString(undefined, { year: 'numeric' })}{' '}
 					starts in:
 				</h2>
 			</div>
 			<div class="row mt-4 mb-4">
-				<div class="offset-2 col-2 fs-4 text-center">
-					<strong>{cd.days}</strong>
+				<div class="offset-md-2 col-md-2 col-3 fs-md-4 text-center">
+					<strong class="fs-4">{cd.days}</strong>
 					<br />
-					{pluralize(cd.days, 'day', 'days')}
+					<Pluralize
+						value={cd.days}
+						singular={() => <>day</>}
+						plural={() => <>days</>}
+					/>
 				</div>
-				<div class="col-2 fs-4 text-center">
-					<strong>{cd.hours}</strong>
+				<div class="col-md-2 col-3  fs-md-4 text-center">
+					<strong class="fs-4">{cd.hours}</strong>
 					<br />
-					{pluralize(cd.hours, 'hour', 'hours')}
+					<Pluralize
+						value={cd.hours}
+						singular={() => <>hour</>}
+						plural={() => <>hours</>}
+					/>
 				</div>
-				<div class="col-2 fs-4 text-center">
-					<strong>{cd.minutes}</strong>
+				<div class="col-md-2 col-3  fs-md-4 text-center">
+					<strong class="fs-4">{cd.minutes}</strong>
 					<br />
-					{pluralize(cd.minutes, 'minute', 'minutes')}
+					<Pluralize
+						value={cd.minutes}
+						singular={() => <>mi&shy;nute</>}
+						plural={() => <>mi&shy;nutes</>}
+					/>
 				</div>
-				<div class="col-2 fs-4 text-center">
-					<strong>{cd.seconds}</strong>
+				<div class="col-md-2 col-3  fs-md-4 text-center">
+					<strong class="fs-4">{cd.seconds}</strong>
 					<br />
-					{pluralize(cd.seconds, 'second', 'seconds')}
+					<Pluralize
+						value={cd.seconds}
+						singular={() => <>se&shy;cond</>}
+						plural={() => <>se&shy;conds</>}
+					/>
 				</div>
 			</div>
 			<div class="row mt-4 mb-4">
