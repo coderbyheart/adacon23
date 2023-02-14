@@ -2,6 +2,7 @@ import { ConfStats } from '@components/ConfStats'
 import { Countdown } from '@components/Countdown'
 import { Header } from '@components/Header'
 import { HeaderNav } from '@components/HeaderNav'
+import { Previously } from '@components/Previously'
 import type { Page } from '@context/Pages'
 
 export const Start = ({ page }: { page: Page }) => (
@@ -26,6 +27,7 @@ export const Start = ({ page }: { page: Page }) => (
 				</div>
 				<Countdown />
 			</div>
+			<Previously />
 		</main>
 	</>
 )
