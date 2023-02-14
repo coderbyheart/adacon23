@@ -16,14 +16,14 @@ export const ConfStats = () => (
 						{Con.statistics.attendees}
 					</strong>
 					<br />
-					<span class="fs-4 opacity-65 fw-semibold">Attendees</span>
+					<span class="fs-md-4 opacity-65 fw-semibold">Attendees</span>
 				</div>
 				<div class="col-3">
 					<strong class="fs-1 fw-semibold font-headline">
 						{Con.statistics.days}
 					</strong>
 					<br />
-					<span class="fs-4 opacity-65 fw-semibold">
+					<span class="fs-md-4 opacity-65 fw-semibold">
 						{pluralize(Con.statistics.days, 'Day', 'Days')}
 					</span>
 				</div>
@@ -32,15 +32,19 @@ export const ConfStats = () => (
 						{Con.statistics.talks}
 					</strong>
 					<br />
-					<span class="fs-4 opacity-65 fw-semibold">Talks</span>
+					<span class="fs-md-4 opacity-65 fw-semibold">Talks</span>
 				</div>
 				<div class="col-3">
 					<strong class="fs-1 fw-semibold font-headline">
 						{Con.statistics.workshops}
 					</strong>
 					<br />
-					<span class="fs-4 opacity-65 fw-semibold">
-						{pluralize(Con.statistics.workshops, 'Workshop', 'Workshops')}
+					<span class="fs-md-4 opacity-65 fw-semibold">
+						{pluralize(
+							Con.statistics.workshops,
+							`Work${'\u200B'}shop`,
+							`Work${'\u200B'}shops`,
+						)}
 					</span>
 				</div>
 			</div>
