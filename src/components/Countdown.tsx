@@ -88,7 +88,7 @@ export const Countdown = () => {
 			</div>
 			<div class="row mt-4 mb-4">
 				<div class="d-flex justify-content-center">
-					<a href="/tickets" class="btn btn-primary font-headline">
+					<a href="./tickets" class="btn btn-primary font-headline">
 						Get Your Tickets Today
 					</a>
 				</div>

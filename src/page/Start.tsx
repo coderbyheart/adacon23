@@ -4,6 +4,7 @@ import { Footer } from '@components/Footer'
 import { Header } from '@components/Header'
 import { HeaderNav } from '@components/HeaderNav'
 import { Previously } from '@components/Previously'
+import { Venue } from '@components/Venue'
 import type { Page } from '@context/Pages'
 
 export const Start = ({ page }: { page: Page }) => (
@@ -29,6 +30,7 @@ export const Start = ({ page }: { page: Page }) => (
 				<Countdown />
 			</div>
 			<Previously />
+			<Venue />
 		</main>
 		<Footer />
 	</>

@@ -102,7 +102,7 @@ export const Header = () => {
 								month: 'long',
 								year: 'numeric',
 							})}{' '}
-							<MapPin /> Oslo, Norway
+							<MapPin /> Rebel, Oslo, Norway
 						</p>
 						<div class="col-lg-6">
 							<p class="fs-4 text-white fw-semibold">
@@ -111,7 +111,7 @@ export const Header = () => {
 							</p>
 							<p>
 								<a
-									href="/tickets"
+									href="./tickets"
 									class="btn btn-primary fs-5 fw-bold font-headline "
 								>
 									Get Tickets
