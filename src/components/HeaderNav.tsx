@@ -50,7 +50,7 @@ export const HeaderNav = () => {
 				<div class="container">
 					<header class="d-flex py-3 text-white justify-content-between">
 						<a
-							href="/"
+							href="./"
 							class="d-flex align-items-center text-decoration-none fw-bold"
 						>
 							<img
