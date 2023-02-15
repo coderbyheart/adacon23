@@ -93,6 +93,9 @@ export const Footer = () => (
 						<a href="https://techwomen.no/" rel="me">
 							Tech Women Norway
 						</a>
+						<a href="./logos" class="ms-4">
+							Logo
+						</a>
 						<a
 							href="https://techwomen.no/code-of-conduct"
 							rel="me"
