@@ -76,7 +76,8 @@ a {
   color: inherit;
 }
 
-p {
+p,
+li {
   color: var(--color-text);
   font-size: 18px;
 }

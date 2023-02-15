@@ -96,11 +96,7 @@ export const Footer = () => (
 						<a href="./logos" class="ms-4">
 							Logo
 						</a>
-						<a
-							href="https://techwomen.no/code-of-conduct"
-							rel="me"
-							class="ms-4"
-						>
+						<a href="./code-of-conduct" rel="me" class="ms-4">
 							Code of Conduct
 						</a>
 					</nav>
