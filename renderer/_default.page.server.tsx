@@ -18,7 +18,7 @@ export const render = async (pageContext: PageContextCustom) => {
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
         <meta name="application-name" content="Ada Con 2023" />
-        <meta name="base" content="${import.meta.env.BASE_URL}" />
+        <base href="${import.meta.env.BASE_URL}">
         <title>
           Ada Con 2023 in Oslo
         </title>
