@@ -1,5 +1,6 @@
 import { ConfStats } from '@components/ConfStats'
 import { Countdown } from '@components/Countdown'
+import { Footer } from '@components/Footer'
 import { Header } from '@components/Header'
 import { HeaderNav } from '@components/HeaderNav'
 import { Previously } from '@components/Previously'
@@ -29,5 +30,6 @@ export const Start = ({ page }: { page: Page }) => (
 			</div>
 			<Previously />
 		</main>
+		<Footer />
 	</>
 )
