@@ -81,3 +81,17 @@ li {
   color: var(--color-text);
   font-size: 18px;
 }
+
+.markdown blockquote {
+  padding-left: 1rem;
+  border-left: 5px solid #d1d1d1;
+  font-style: italic;
+}
+
+.markdown h2,
+.markdown h3,
+.markdown h4,
+.markdown h5,
+.markdown h6 {
+  margin-top: 2rem;
+}

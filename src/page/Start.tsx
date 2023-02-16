@@ -21,7 +21,7 @@ export const Start = ({ page }: { page: Page }) => (
 				</div>
 				<div class="row">
 					<div
-						class="col-lg-8 mx-auto"
+						class="col-lg-8 mx-auto markdown"
 						dangerouslySetInnerHTML={{
 							__html: page.html,
 						}}

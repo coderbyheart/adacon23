@@ -39,6 +39,7 @@ const navItems: [link: string, title: string, button?: boolean][] = [
 	[`./#schedule`, 'Schedule'],
 	[`./#venue`, 'Venue'],
 	[`./#sponsors`, 'Sponsors'],
+	[`./matrix`, 'Chat'],
 	[`./tickets`, 'Tickets', true],
 ]
 
