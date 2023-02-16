@@ -1,4 +1,4 @@
-import { MapIcon } from 'lucide-preact'
+import { Map } from 'lucide-preact'
 import { styled } from 'styled-components'
 
 const Tiles = styled.div`
@@ -44,7 +44,7 @@ export const Venue = () => (
 					</p>
 					<p>
 						<a href="https://goo.gl/maps/EtBqWKXHNEsUAddr5" target="_blank">
-							<MapIcon /> Open in Google Maps
+							<Map /> Open in Google Maps
 						</a>
 					</p>
 					<h4 class="mt-4 mb-3">How To Get Here</h4>
