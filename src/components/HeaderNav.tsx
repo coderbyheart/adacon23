@@ -1,9 +1,8 @@
 import { Menu, X } from 'lucide-preact'
-import { useState } from 'preact/hooks'
+import { useEffect, useRef, useState } from 'preact/hooks'
 import { styled } from 'styled-components'
 
 const FixedNav = styled.div`
-	background-color: var(--color-dark-bg);
 	ul.nav {
 		font-size: 14px;
 		font-family: var(--headline-font);
@@ -17,6 +16,10 @@ const FixedNav = styled.div`
 	left: 0;
 	width: 100vw;
 	z-index: 1001;
+`
+
+const FixedOpaqueNav = styled(FixedNav)`
+	background-color: var(--color-dark-bg);
 `
 
 const MobileNavigation = styled.nav`
@@ -35,19 +38,46 @@ const MobileNavigation = styled.nav`
 
 const navItems: [link: string, title: string, button?: boolean][] = [
 	[`./#about`, 'About'],
-	[`./#speakers`, 'Speakers'],
-	[`./#schedule`, 'Schedule'],
-	[`./#venue`, 'Venue'],
-	[`./#sponsors`, 'Sponsors'],
+	[`./#location`, 'Location'],
 	[`./matrix`, 'Chat'],
+	[`./contact`, 'Contact'],
 	[`./tickets`, 'Tickets', true],
 ]
 
-export const HeaderNav = () => {
+export const HeaderNav = ({ transparent }: { transparent?: boolean }) => {
 	const [menuVisible, showMenu] = useState<boolean>(false)
+	const [scrolling, setScrolling] = useState<boolean>(false)
+	const t = useRef<NodeJS.Timeout>()
+	useEffect(() => {
+		const onScroll = () => {
+			if (t.current !== undefined) {
+				clearTimeout(t.current)
+				t.current = undefined
+			}
+			t.current = setTimeout(() => {
+				const isScrolling = window.scrollY > 0
+				console.log('Done scrolling', isScrolling)
+				setScrolling(isScrolling)
+			}, 250)
+		}
+		window?.addEventListener('scroll', onScroll)
+
+		return () => {
+			window?.removeEventListener('scroll', onScroll)
+			if (t.current !== undefined) clearTimeout(t.current)
+		}
+	}, [])
+
+	const Nav =
+		transparent ?? false
+			? scrolling
+				? FixedOpaqueNav
+				: FixedNav
+			: FixedOpaqueNav
+
 	return (
 		<>
-			<FixedNav>
+			<Nav>
 				<div class="container">
 					<header class="d-flex py-3 text-white justify-content-between">
 						<a
@@ -91,7 +121,7 @@ export const HeaderNav = () => {
 						</button>
 					</header>
 				</div>
-			</FixedNav>
+			</Nav>
 			{menuVisible && (
 				<div class="d-lg-none">
 					<MobileNavigation>

@@ -3,15 +3,17 @@ import { Countdown } from '@components/Countdown'
 import { Footer } from '@components/Footer'
 import { Header } from '@components/Header'
 import { HeaderNav } from '@components/HeaderNav'
+import { Location } from '@components/Location'
 import { Previously } from '@components/Previously'
-import { Venue } from '@components/Venue'
 import type { Page } from '@context/Pages'
 
 export const Start = ({ page }: { page: Page }) => (
 	<>
-		<HeaderNav />
+		<HeaderNav transparent={true} />
 		<Header />
-		<ConfStats />
+		<div id="about">
+			<ConfStats />
+		</div>
 		<main class="bg-off-white">
 			<div class="container py-4">
 				<div class="row">
@@ -30,7 +32,7 @@ export const Start = ({ page }: { page: Page }) => (
 				<Countdown />
 			</div>
 			<Previously />
-			<Venue />
+			<Location />
 		</main>
 		<Footer />
 	</>

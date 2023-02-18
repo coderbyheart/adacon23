@@ -29,11 +29,11 @@ const Figures = styled.div`
 	}
 `
 
-export const Venue = () => (
-	<section id="venue">
+export const Location = () => (
+	<section id="location">
 		<div class="container">
 			<div class="row text-center mt-4">
-				<h2 class="mb-4 mt-4">Venue</h2>
+				<h2 class="mb-4 mt-4">Location</h2>
 			</div>
 			<div class="row py-lg-5">
 				<div class="col-12 col-lg-7">
@@ -88,7 +88,7 @@ export const Venue = () => (
 						</div>
 						<div>
 							<h5 class=" mb-3 title">By Bus</h5>
-							<p>There are multiple bus-stops close to the venue.</p>
+							<p>There are multiple bus-stops close to the location.</p>
 							<a
 								class=""
 								href="https://ruter.no/"
