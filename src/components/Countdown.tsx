@@ -41,58 +41,33 @@ export const Countdown = () => {
 		}
 	}, [])
 	return (
-		<aside>
-			<div class="row mt-4 mb-4">
-				<h2 class="fs-md-4 text-center">
-					Ada Con {Con.date.toLocaleDateString(undefined, { year: 'numeric' })}{' '}
-					starts in:
-				</h2>
-			</div>
-			<div class="row mt-4 mb-4">
-				<div class="offset-md-2 col-md-2 col-3 fs-md-4 text-center">
-					<strong class="fs-4">{cd.days}</strong>
-					<br />
-					<Pluralize
-						value={cd.days}
-						singular={() => <>day</>}
-						plural={() => <>days</>}
-					/>
-				</div>
-				<div class="col-md-2 col-3  fs-md-4 text-center">
-					<strong class="fs-4">{cd.hours}</strong>
-					<br />
-					<Pluralize
-						value={cd.hours}
-						singular={() => <>hour</>}
-						plural={() => <>hours</>}
-					/>
-				</div>
-				<div class="col-md-2 col-3  fs-md-4 text-center">
-					<strong class="fs-4">{cd.minutes}</strong>
-					<br />
-					<Pluralize
-						value={cd.minutes}
-						singular={() => <>mi&shy;nute</>}
-						plural={() => <>mi&shy;nutes</>}
-					/>
-				</div>
-				<div class="col-md-2 col-3  fs-md-4 text-center">
-					<strong class="fs-4">{cd.seconds}</strong>
-					<br />
-					<Pluralize
-						value={cd.seconds}
-						singular={() => <>se&shy;cond</>}
-						plural={() => <>se&shy;conds</>}
-					/>
-				</div>
-			</div>
-			<div class="row mt-4 mb-4">
-				<div class="d-flex justify-content-center">
-					<a href="./tickets" class="btn btn-primary font-headline">
-						Get Your Tickets Today
-					</a>
-				</div>
-			</div>
-		</aside>
+		<time dateTime={Con.date.toISOString()}>
+			{cd.days}{' '}
+			<Pluralize
+				value={cd.days}
+				singular={() => <>day</>}
+				plural={() => <>days</>}
+			/>{' '}
+			{cd.hours}{' '}
+			<Pluralize
+				value={cd.hours}
+				singular={() => <>hour</>}
+				plural={() => <>hours</>}
+			/>{' '}
+			{cd.minutes}{' '}
+			<Pluralize
+				value={cd.minutes}
+				singular={() => <>mi&shy;nute</>}
+				plural={() => <>mi&shy;nutes</>}
+			/>
+			{' and '}
+			{cd.seconds}{' '}
+			<Pluralize
+				value={cd.seconds}
+				singular={() => <>se&shy;cond</>}
+				plural={() => <>se&shy;conds</>}
+			/>
+			.
+		</time>
 	)
 }

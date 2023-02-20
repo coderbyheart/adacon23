@@ -1,10 +1,12 @@
 import { ConfStats } from '@components/ConfStats'
-import { Countdown } from '@components/Countdown'
 import { Footer } from '@components/Footer'
 import { Header } from '@components/Header'
 import { HeaderNav } from '@components/HeaderNav'
 import { Location } from '@components/Location'
 import { Previously } from '@components/Previously'
+import { Speakers } from '@components/Speakers'
+import { Sponsors } from '@components/Sponsors'
+import { Tickets } from '@components/Tickets'
 import type { Page } from '@context/Pages'
 
 export const Start = ({ page }: { page: Page }) => (
@@ -29,10 +31,12 @@ export const Start = ({ page }: { page: Page }) => (
 						}}
 					/>
 				</div>
-				<Countdown />
 			</div>
+			<Tickets />
 			<Previously />
+			<Speakers />
 			<Location />
+			<Sponsors />
 		</main>
 		<Footer />
 	</>

@@ -17,10 +17,10 @@ export const render = async (pageContext: PageContextCustom) => {
           name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
-        <meta name="application-name" content="Ada Con 2023" />
+        <meta name="application-name" content="Ada Con Norway 2023" />
         <base href="${import.meta.env.BASE_URL}">
         <title>
-          Ada Con 2023 in Oslo
+          Ada Con Norway 2023 in Oslo
         </title>
         <meta
           name="description"

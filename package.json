@@ -1,7 +1,7 @@
 {
   "name": "@coderbyheart/adacon23",
   "version": "0.0.0-development",
-  "description": "Ada Con 2023 in Oslo",
+  "description": "Ada Con Norway 2023 in Oslo",
   "scripts": {
     "prepare": "husky install",
     "start": "vite",

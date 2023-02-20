@@ -1,12 +1,7 @@
 import { Github, Instagram, Youtube } from 'lucide-preact'
-import { styled } from 'styled-components'
-
-const F = styled.footer`
-	background-color: var(--color-highlight);
-`
 
 export const Footer = () => (
-	<F>
+	<div class="bg-highlight">
 		<div class="container text-white text-center">
 			<div class="row">
 				<div class="col-12 pt-4 pb-4">
@@ -140,5 +135,5 @@ export const Footer = () => (
 				</div>
 			</div>
 		</div>
-	</F>
+	</div>
 )

@@ -6,7 +6,7 @@ const Tiles = styled.div`
 	grid-template-columns: 1fr 1fr;
 	div {
 		padding: 1rem;
-		border: 1px solid #000000;
+		border: 1px solid #ffffff;
 	}
 	grid-gap: 1.5rem;
 `
@@ -30,14 +30,14 @@ const Figures = styled.div`
 `
 
 export const Location = () => (
-	<section id="location">
+	<section id="location" class="bg-highlight text-white py-4">
 		<div class="container">
-			<div class="row text-center mt-4">
-				<h2 class="mb-4 mt-4">Location</h2>
+			<div class="row text-center py-4">
+				<h2 class="py-4">Location</h2>
 			</div>
 			<div class="row py-lg-5">
 				<div class="col-12 col-lg-7">
-					<h3 class="mb-4 mt-4">Rebel</h3>
+					<h3 class="py-4">Rebel</h3>
 					<p>
 						Universitetsgata 2<br />
 						0164 Oslo

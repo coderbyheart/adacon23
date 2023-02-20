@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from 'preact/hooks'
 import { styled } from 'styled-components'
 import { Con } from '../con'
 import { shuffleArray } from '../shuffleArray'
+import { Countdown } from './Countdown'
 
 const TitleWrapper = styled.header`
 	width: 100%;
@@ -93,7 +94,7 @@ export const Header = () => {
 			<div class="container">
 				<div class="text-secondary py-5">
 					<div class="py-5">
-						<h1 class="text-white">Ada Con 2023</h1>
+						<h1 class="text-white">Ada Con Norway 2023</h1>
 						<p class="fs-4 font-headline text-white">
 							<Calendar />{' '}
 							{Con.date.toLocaleDateString(undefined, {
@@ -106,12 +107,13 @@ export const Header = () => {
 						</p>
 						<div class="col-lg-6">
 							<p class="fs-4 text-white fw-semibold">
-								Ada Lovelace Day Conference is a yearly conference which
-								celebrates Norwegian women and non-binary people in Tech.
+								Celebrating the Diversity of the Norwegian Tech Scene in:
+								<br />
+								<Countdown />
 							</p>
 							<p>
 								<a
-									href="./tickets"
+									href="./#tickets"
 									class="btn btn-primary fs-5 fw-bold font-headline "
 								>
 									Get Tickets

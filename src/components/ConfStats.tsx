@@ -1,14 +1,8 @@
-import { styled } from 'styled-components'
 import { Con } from '../con'
 import { Pluralize } from './Pluralize'
 
-const StatsWrapper = styled.aside`
-	width: 100%;
-	background-color: var(--color-highlight);
-`
-
 export const ConfStats = () => (
-	<StatsWrapper>
+	<div class="bg-highlight">
 		<div class="container">
 			<div class="row text-center text-white py-4">
 				<div class="col-3">
@@ -53,5 +47,5 @@ export const ConfStats = () => (
 				</div>
 			</div>
 		</div>
-	</StatsWrapper>
+	</div>
 )
