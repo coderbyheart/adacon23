@@ -44,7 +44,7 @@ first resource when reporting a _Ada Con Norway_-related incident, so that we
 may enforce the Code of Conduct and take quick action toward a resolution.
 
 If at all possible, all reports should be made directly to
-[techwomen.no@gmail.com](mailto:techwomen.no@gmail.com) or through the
+[adacon.norway@gmail.com](mailto:adacon.norway@gmail.com) or through the
 [contact form](/contact.html).
 
 ## Acknowledgments

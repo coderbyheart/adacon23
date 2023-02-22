@@ -81,7 +81,7 @@ If the matter is especially urgent, please contact any of these individuals:
 - Patricia Aas at [psmaas@gmail.com](mailto:psmaas@gmail.com)
 
 You may also send an email to
-[techwomen.no@gmail.com](mailto:techwomen.no@gmail.com) or use the
+[adacon.norway@gmail.com](mailto:adacon.norway@gmail.com) or use the
 [contact form](./contact).
 
 Conference staff will be happy to help participants contact venue security or
