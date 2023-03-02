@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'preact/hooks'
+import { ViewportObserver } from 'preact-intersection-observer'
 
 export const Previously = () => (
 	<section class="bg-highlight py-4">
@@ -39,30 +39,25 @@ export const Previously = () => (
 	</section>
 )
 
-const EmbedPlaylist = ({ list, title }: { list: string; title: string }) => {
-	const containerEl = useRef<HTMLDivElement>(null)
-
-	const [size, setSize] = useState<[number, number]>()
-
-	useEffect(() => {
-		if (containerEl.current === null) return
-		const el = containerEl.current
-		const w = el.clientWidth
-		const h = (el.clientWidth / 560) * 315
-		setSize([w, h])
-	}, [containerEl])
-
-	return (
-		<div ref={containerEl}>
-			<iframe
-				width={size?.[0] ?? 560}
-				height={size?.[1] ?? 315}
-				src={`https://www.youtube-nocookie.com/embed/videoseries?list=${list}`}
-				title={title}
-				frameBorder="0"
-				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-				allowFullScreen
-			></iframe>
-		</div>
-	)
-}
+const EmbedPlaylist = ({ list, title }: { list: string; title: string }) => (
+	<ViewportObserver
+		render={({ inView, entry }) => {
+			if (!inView) return null
+			console.log(entry)
+			const width = entry?.boundingClientRect.width ?? 560
+			const height = (width / 560) * 315
+			return (
+				<iframe
+					width={width}
+					height={height}
+					src={`https://www.youtube-nocookie.com/embed/videoseries?list=${list}`}
+					title={title}
+					frameBorder="0"
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+					allowFullScreen
+				></iframe>
+			)
+		}}
+		options={{ triggerOnce: true }}
+	></ViewportObserver>
+)

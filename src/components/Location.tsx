@@ -1,4 +1,5 @@
 import { Map } from 'lucide-preact'
+import { ViewportObserver } from 'preact-intersection-observer'
 import { styled } from 'styled-components'
 
 const Tiles = styled.div`
@@ -101,18 +102,26 @@ export const Location = () => (
 					</Tiles>
 				</div>
 				<div class="col-12 col-lg-4 offset-lg-1 position-relative mt-5 mt-lg-0 text-center">
-					<Figures>
-						<img
-							class="img-fluid"
-							alt="Universitetsgata 2, 0164 Oslo"
-							src="./static/rebel.jpg"
-						/>
-						<img
-							class="img-fluid"
-							alt="Universitetsgata 2, 0164 Oslo"
-							src="./static/rebel2.jpg"
-						/>
-					</Figures>
+					<ViewportObserver
+						render={({ inView }) => {
+							if (!inView) return null
+							return (
+								<Figures>
+									<img
+										class="img-fluid"
+										alt="Universitetsgata 2, 0164 Oslo"
+										src="./static/rebel.jpg"
+									/>
+									<img
+										class="img-fluid"
+										alt="Universitetsgata 2, 0164 Oslo"
+										src="./static/rebel2.jpg"
+									/>
+								</Figures>
+							)
+						}}
+						options={{ triggerOnce: true }}
+					></ViewportObserver>
 				</div>
 			</div>
 		</div>

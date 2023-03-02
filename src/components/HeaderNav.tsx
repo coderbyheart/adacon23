@@ -58,7 +58,6 @@ export const HeaderNav = ({ transparent }: { transparent?: boolean }) => {
 			}
 			t.current = setTimeout(() => {
 				const isScrolling = window.scrollY > 0
-				console.log('Done scrolling', isScrolling)
 				setScrolling(isScrolling)
 			}, 250)
 		}
