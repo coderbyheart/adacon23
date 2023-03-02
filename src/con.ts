@@ -3,7 +3,6 @@ export const Con = {
 	statistics: {
 		attendees: 200,
 		days: 1,
-		talks: 8,
-		workshops: 2,
+		talks: 16,
 	},
 }
