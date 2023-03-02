@@ -28,6 +28,7 @@ const BG = styled.div`
 	z-index: 99;
 	opacity: 0.25;
 	filter: blur(1px);
+	transition: background-image 1s linear;
 `
 const images = [
 	'https://cdn.sanity.io/images/q0ipzqdg/production/0de63fc64eec56092fe8908a58424ac5914fc041-4556x3417.jpg',
