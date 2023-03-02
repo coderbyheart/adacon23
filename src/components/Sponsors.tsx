@@ -33,6 +33,17 @@ export const Sponsors = () => (
 					<br />
 					Location Sponsor
 				</p>
+				<p>
+					<a href="https://ndcconferences.com/" rel="friend met">
+						<img
+							src="./static/ndc.png"
+							alt="NDC Conferences"
+							class="img-fluid mt-4 mb-2"
+						/>
+					</a>
+					<br />
+					Video Sponsor
+				</p>
 			</div>
 			<div class="row py-lg-5">
 				<div class="col-md-6 offset-md-3">
