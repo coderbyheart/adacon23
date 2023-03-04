@@ -24,7 +24,7 @@ export const render = async (pageContext: PageContextCustom) => {
         </title>
         <meta
           name="description"
-          content="Ada Lovelace Day Conference is a yearly conference which celebrates Norwegian women and non-binary people in Tech."
+          content="Ada Con Norway is a yearly conference celebrating underrepresented folks in Tech in Norway."
         />
         <link
           rel="stylesheet"

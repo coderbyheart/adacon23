@@ -1,31 +1,26 @@
 ---
-title:
-  A yearly conference celebrating Norwegian women and non-binary people in Tech
+title: A yearly conference celebrating underrepresented folks in Tech in Norway
 ---
 
 Ada Con Norway is proud to announce the return of its conference in 2023,
 celebrating the diversity of the Norwegian tech scene. The event, which was
-formerly known as [Tech Women Norway](https://techwomen.no/), will be held on
-Ada Lovelace Day, Tuesday, 10.10.2023, at Rebel, Universitetsgata 2, 0164 Oslo.
+formerly done as a part of [Tech Women Norway](https://techwomen.no/) will now
+go by the name Ada Con. We believe that diversity efforts have to go along more
+axis than gender, and that we need to acknowledge that this work is
+intersectional. Our new name reflects this commitment.
 
-We are excited to bring Ada Con Norway back after four years. We believe that
-diversity efforts need to be intersectional, and our new name reflects this
-commitment. We are looking forward to bringing together a community of
-individuals who are passionate about promoting diversity in tech.
+The event will be held on Ada Lovelace Day as before, which is the second
+Tuesday in October every year. This year it falls on Tuesday October 10th. Our
+venue is Rebel, Universitetsgata 2, 0164 Oslo.
 
 Ada Con Norway aims to promote and empower under-indexed people in tech by
-showcasing a lineup of speakers and workshops from diverse backgrounds. The jury
-selection is based on hands-on contributions and not on role or career path
-within tech. Acknowledging that many contributions are often not publicly
-visible, we try to enumerate contributions as well as we can. The people
-presented here serve as role-models for folks in Norway trying to build a career
-working hands-on in tech.
+showcasing a lineup of speakers from diverse backgrounds.
 
 ## Tech Role Models of 2023
 
 Additionally, we present our Tech Role Models of 2023. The role models are
-selected in collaboration with an independent jury and presented at the Ada
-Lovelace mini-conference.
+selected in collaboration with an independent jury and presented at the
+conference.
 
 And for that we need YOUR input. Please suggest people you would love to be
 recognized using our [submission form](https://forms.gle/TKLe2RGPQm4pS3v79).

@@ -6,8 +6,8 @@ title: Code of Conduct
 > Conduct. This Code of Conduct applies not only to our events but to all
 > digital spaces that are operated by us, such as GitHub.
 
-_Ada Con Norway_ is a yearly event to celebrate Norwegian women and gender queer
-people that are Individual Contributors in tech on Ada Lovelace Day Oct 8th.
+_Ada Con Norway_ is a yearly conference celebrating underrepresented folks in
+Tech in Norway.
 
 We value the participation of everyone who wants to celebrate with us and want
 all attendees to have an enjoyable and fulfilling experience. Accordingly, all
