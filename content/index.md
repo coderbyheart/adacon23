@@ -15,17 +15,3 @@ venue is Rebel, Universitetsgata 2, 0164 Oslo.
 
 Ada Con Norway aims to promote and empower under-indexed people in tech by
 showcasing a lineup of speakers from diverse backgrounds.
-
-## Tech Role Models of 2023
-
-Additionally, we present our Tech Role Models of 2023. The role models are
-selected in collaboration with an independent jury and presented at the
-conference.
-
-And for that we need YOUR input. Please suggest people you would love to be
-recognized using our [submission form](https://forms.gle/TKLe2RGPQm4pS3v79).
-
-You can read more about the
-[Tech Role Models initiative in Norwegian](https://www.digi.no/artikler/patricia-aas-arrangerer-pris-for-kvinner-som-faktisk-jobber-i-it/471216),
-and look at our
-[Tech Role Models 2019](https://techwomen.no/tech-role-models-2019)!
